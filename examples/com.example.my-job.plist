@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Example launchd job that reads an external drive through vol_io (which falls back to mac-proxy).
+     Copy to ~/Library/LaunchAgents/, edit the paths, then:
+       launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.example.my-job.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.example.my-job</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/path/to/your/job.py</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>3600</integer>
+  <key>StandardOutPath</key>
+  <string>/path/to/logs/my-job.log</string>
+  <key>StandardErrorPath</key>
+  <string>/path/to/logs/my-job.log</string>
+</dict>
+</plist>
