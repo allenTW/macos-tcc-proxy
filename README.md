@@ -95,6 +95,12 @@ So the proxy does not reduce what your own account can do; it only changes which
 python3 -m pytest -q tests     # 15 tests; no daemon, network or real home directory needed
 ```
 
+## Background
+
+- The Claude Code setup this proxy is part of (Traditional Chinese): https://sumertw.com/blog/ai-honest-stop-hook?utm_source=github&utm_medium=readme&utm_campaign=tcc-proxy
+- Companion repo: [claude-code-guardrails](https://github.com/allenTW/claude-code-guardrails)
+- More write-ups and the newsletter: https://sumertw.com/blog/?utm_source=github&utm_medium=readme&utm_campaign=tcc-proxy
+
 ## 繁體中文簡介
 
 讓自動化工具（Claude Code、launchd）更新後不必重新授權 macOS 隱私權限：授權掛在穩定的 `/usr/bin/osascript` 上，由常駐代理程序代為執行；`vol_io` 處理 launchd 讀不到外接碟的情況。注意：代理沒有白名單，能寫入 `~/.mac-proxy/req` 的人就能以你的身分執行指令，請保持該目錄為 700。安裝：`./install.sh`。
